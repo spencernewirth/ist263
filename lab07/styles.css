@@ -1,6 +1,8 @@
-body{font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
+body{font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; color: #fff;}
+body{background-color: #1F1F1F; }
+nav{background-color: #1F1F1F;}
 
+nav a {color: #fff;}
+nav a:hover {background-color: #487DD9}
 
-body{background-image: url(../images/SYRACUSE_BlockS_ORANGE_RGB.jpg); background-repeat: repeat;}
-body{background-color: #ffffff; color: #F76900;}
-p{border:2px solid #F76900}
+nav{transition-property: 10px;}
