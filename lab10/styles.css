@@ -1,0 +1,8 @@
+body{font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; color: #fff;}
+body{background-color: #1F1F1F; }
+nav{background-color: #1F1F1F;}
+
+nav a {color: #fff;}
+nav a:hover {background-color: #487DD9}
+
+nav{transition-property: 10px;}
