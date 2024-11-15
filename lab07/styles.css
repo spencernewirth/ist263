@@ -5,4 +5,6 @@ nav{background-color: #1F1F1F;}
 nav a {color: #fff;}
 nav a:hover {background-color: #487DD9}
 
-nav{transition-property: 10px;}
+nav{padding:10px;}
+nav{margin-bottom: 30px;}
+
