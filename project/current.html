@@ -5,6 +5,19 @@
         <meta charset="utf-8">
         <title>Current Work</title>
         <style>
+            .animate-on-scroll {
+                opacity: 0;
+                transition: opacity 1s ease-out; 
+            }
+
+            .animate-on-scroll.fade-in {
+                opacity: 1;
+            }
+
+            .animate-on-scroll.fade-out {
+                opacity: 0; 
+            }
+
             header a {
                 color:white;
             }
@@ -33,7 +46,10 @@
                 font-size: 15px;
                 flex-shrink: 0;
             }
-
+            header img {
+                width: 30px;
+                height: 30px;
+            }
             nav {
                 display: flex;
                 justify-content: center;
@@ -167,7 +183,7 @@
                 height: 200px;
                 border-radius: 5px;
                 border: 1px solid #ccc;
-                padding: 10px;
+                padding: 5px;
                 font-size: 16px;
                 resize: vertical;
             }
@@ -248,20 +264,24 @@
             <a href="current.html">Current Work</a>
         </nav>
         <h1 style="padding-left: 30px;">CURRENTLY WORKING ON...</h1>
-        <div class='KTP_Position'>
+        <div class='KTP_Position animate-on-scroll'>
             <h1 style="text-align: center;">KAPPA THETA PI CO-BLOGGER CHAIR</h1>
             <div class="content-flex">
                 <div class="text-content">
                     <h2>Currently producing short-form unscripted content for the Kappa Theta Pi Professional Technology Fraternity</h2>
                     <h3>KTP Cribs Episode 1</h3>
-                    <p>Assisted in producing, filming, and editing this unscripted episode created during the Fall 2024 Semester.</p>
+                    <p>Assisted in producing, filming, and editing this unscripted episode created during the Fall 2024 Semester.
+                    </p>
+                    <p style="font: size 10px;">
+                        *note - Youtube embed does work, but because my video is unlisted it does not properly show on this site. Clicking the link will send you to the video. Other, unlisted videos will appear 100% correctly and watchable on the page, I would just need to change the link.
+                    </p>
                 </div>
                 <div class="youtube-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vzL5JKXBGZ0?si=GodixXKFq0rGTk3g" title="KTP Cribs Episode 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WkgAfq3pNrk?si=g4RBQWuL6zd5wvYY" title="KTP Cribs Episode 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-        <div class="courses">
+        <div class="courses animate-on-scroll">
             <h2>CURRENT / RECENT COURSES</h2>
             <p>
                 Managing Information System Projects <br>
@@ -272,7 +292,7 @@
                 Italian 3 <br>
             </p>
         </div>
-        <section class="future-plans">
+        <section class="future-plans animate-on-scroll">
             <h2>Future Plans</h2>
             <div class="future-flex">
                 <article class="half-dome">
@@ -293,5 +313,33 @@
         <footer>
             <p>Copyright &copy; 2024 Spencer Newirth. All rights reserved.</p>
         </footer>
+
+        <script>
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+            window.addEventListener('scroll', () => {
+                animatedElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        element.classList.add('fade-in');
+                        element.classList.remove('fade-out');
+                    } else {
+                        element.classList.add('fade-out');
+                        element.classList.remove('fade-in');
+                    }
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                animatedElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        element.classList.add('fade-in');
+                        element.classList.remove('fade-out');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

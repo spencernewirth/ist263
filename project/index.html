@@ -6,6 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Spencer Newirth</title>
         <style> 
+            .animate-on-scroll {
+                opacity: 0;
+                transition: opacity 1s ease-out; 
+            }
+
+            .animate-on-scroll.fade-in {
+                opacity: 1;
+            }
+
+            .animate-on-scroll.fade-out {
+                opacity: 0; 
+            }
+
             body {
                 font-family: Arial, sans-serif;
                 line-height: 1.6;
@@ -32,6 +45,10 @@
             }
             header a:hover { 
                 color:#76ABAE;
+            }
+            header img {
+                width: 30px;
+                height: 30px;
             }
 
             nav {
@@ -188,6 +205,7 @@
         </style>
     </head>
     <body>
+        
         <header>
             <div>Number: +1 917-701-4076 | Email: <a href="mailto:spencenew729@gmail.com">spencenew729@gmail.com</a></div>        
             <div> <a href="https://www.linkedin.com/in/spencer-newirth/"><img src="media/LI-In-Bug.png" style="width:30px;height:30px;"></a> <a href="https://www.linkedin.com/in/spencer-newirth/"></a></div>
@@ -202,7 +220,7 @@
         color: #333">
             SPENCER NEWIRTH
         </h1>
-        <div class="intro-section">
+        <div class="intro-section  animate-on-scroll">
             <img src="media/IMG_8384.jpg" alt="Spencer Newirth">
             <div class="intro-text">
                 <h2>Passionate, Energetic, and Creative</h2>
@@ -213,7 +231,7 @@
                 </p>
             </div>
         </div>
-        <div class="analytics-trf">
+        <div class="analytics-trf animate-on-scroll">
             <article class="ANALYTICS">
                 <h3>APPLIED DATA ANALYTICS</h3>
                 <p>
@@ -232,7 +250,7 @@
         <h2 style="text-align: center; margin: 20px 0; color: #333"> 
             COMMUNITY
         </h2>
-        <div class="community-flex">
+        <div class="community-flex animate-on-scroll">
             <article class="DKA">
                 <h3>DELTA KAPPA ALPHA</h3>
                 <h4>Member of the Omicron chapter of Delta Kappa Alpha, Syracuse University's professional cinematic fraternity.</h4>
@@ -248,4 +266,32 @@
         <footer>
             <p class="footer"> Copyright &copy; 2024 Spencer Newirth. All rights reserved.</p>
         </footer>
+
+        <script>
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+            window.addEventListener('scroll', () => {
+                animatedElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        element.classList.add('fade-in');
+                        element.classList.remove('fade-out');
+                    } else {
+                        element.classList.add('fade-out');
+                        element.classList.remove('fade-in');
+                    }
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                animatedElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        element.classList.add('fade-in');
+                        element.classList.remove('fade-out');
+                    }
+                });
+            });
+        </script>
     </body>

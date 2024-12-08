@@ -3,18 +3,31 @@
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Past Experience</title>
         <style>
+            .animate-on-scroll {
+                opacity: 0;
+                transition: opacity 1s ease-out; 
+            }
+
+            .animate-on-scroll.fade-in {
+                opacity: 1;
+            }
+            .animate-on-scroll.fade-out {
+                opacity: 0; 
+            }
             body {
                 font-family: Arial, sans-serif;
-                line-height: 1.8; /* Increase line height for better readability */
+                line-height: 1.6;
                 margin: 0;
                 padding: 0;
                 background-color: #f9f9f9;
                 display: flex;
                 flex-direction: column;
                 min-height: 100vh;
-        }   
+            }
+
             header {
                 display: flex;
                 justify-content: space-between;
@@ -25,11 +38,17 @@
                 font-size: 15px;
                 flex-shrink: 0;
             }
+
             header a {
                 color:white;
             }
             header a:hover { 
                 color:#76ABAE;
+            }
+
+            header img {
+                width: 30px;
+                height: 30px;
             }
 
             nav {
@@ -57,22 +76,17 @@
 
             h1 {
                 padding-left: 30px;
-                font-size: 24px;
                 margin-bottom: 20px;
             }
 
             h2 {
                 font-size: 20px;
-                margin-top: 0;
                 font-weight: bold;
                 text-align: left;
             }
 
             h3 {
                 font-size: 16px;
-                margin: 0;
-                padding: 0;
-                line-height: 1.6;
             }
 
             .section-title {
@@ -89,7 +103,7 @@
 
             .data-list {
                 display: flex;
-                flex-wrap: wrap; /* Allows items to wrap onto the next line */
+                flex-wrap: wrap; 
                 justify-content: space-between;
                 gap: 20px;
                 max-width: 1500px;
@@ -100,7 +114,24 @@
             .image-container {
                 display: flex;
                 flex-direction: column;
-                width: 48%; /* Adjusted to make room for gap */
+                width: 48%; 
+            }
+
+            .text-container_2 {
+                display:flex;
+                flex-direction:row;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            .text-container_2 .data-item {
+                flex: 1 1 40%;
+                padding: 15px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                text-align: left; /* Align text to the left for better reading */
+                margin-bottom: 20px;
+                flex-wrap: wrap;
             }
 
             .text-container .data-item {
@@ -161,6 +192,19 @@
                 .data-item {
                     flex: 1 1 100%; /* Each item takes full width */
                 }
+                header {
+                    flex-direction: column;
+                    text-align: center;
+                    font-size: 16px;
+                }
+
+                nav {
+                    flex-direction: column;
+                }
+
+                nav a {
+                    margin: 10px 0;
+                }
             }
 
         </style>
@@ -179,7 +223,7 @@
             PAST WORK EXPERIENCE / SKILLS
         </h1>
 
-        <section class="data-box">
+        <section class="data-box animate-on-scroll">
             <h1 class="section-title">DATA ANALYST / SCIENTIST</h1>
             <div class="data-list">
                 <div class="text-container">
@@ -216,10 +260,10 @@
             </div>
         </section>
         
-        <section class="data-box">
+        <section class="data-box animate-on-scroll">
             <h1 class="section-title">PRODUCER</h1>
             <div class="data-list" style="width: 100%; margin: 10px;">
-                <div class="text-container">
+                <div class="text-container_2">
                     <div class="data-item">
                         <h2>Skills</h2>
                         <h3>High Quality Video and Content Production <br> 
@@ -250,10 +294,10 @@
             </div>
         </section>
 
-        <section class="data-box">
+        <section class="data-box animate-on-scroll">
             <h1 class="section-title">TEAM MEMBER</h1>
             <div class="data-list" style="width: 100%; margin: 10px;">
-                <div class="text-container">
+                <div class="text-container_2">
                     <div class="data-item">
                         <h2>Skills</h2>
                         <h3>Fast Learner <br> 
@@ -274,11 +318,11 @@
                     </div>
                     <div class="data-item">
                         <h2>Work Done</h2>
-                        <h3> <bold>LaNewyorkina: </bold> Worked closely with peers in a fast-paced team-oriented environment. Provided excellent customer service and ensured a comfortable environment to patrons, leading to repeat business and satisfaction. <br>
+                        <h3> <strong>LaNewyorkina: </strong> Worked closely with peers in a fast-paced team-oriented environment. Provided excellent customer service and ensured a comfortable environment to patrons, leading to repeat business and satisfaction. <br>
                             Tracked consumable inventory levels and restocked when needed. Engaged in professional and candid conversations to promote offers and contributed to company visibility and growth. <br>
-                            <bold>Hamptons Jazz Fest:</bold> Developed hundreds of content drops on social media to advertise an ongoing Jazz Festival in the Hamptons area of Long Island, New York. <br>
-                            <bold>Hollister Co:</bold>Greeted thousands of customers in-store as a retail sales associate, on-floor merchandiser, and cashier. Considered a high performer in customer sign-ups, expanding enrollment by 70%. <br>
-                            <bold>Technical Theater at LaGuardia:</bold> Headed the Props Build Crew for five productions (2018 to 2022), Scenic Carpenter for eight productions (2018 to 2022), Props Manager for The Pirates of Penzance (2022), Head of Props for All Shook Up (2022)
+                            <strong>Hamptons Jazz Fest:</strong> Developed hundreds of content drops on social media to advertise an ongoing Jazz Festival in the Hamptons area of Long Island, New York. <br>
+                            <strong>Hollister Co:</strong>Greeted thousands of customers in-store as a retail sales associate, on-floor merchandiser, and cashier. Considered a high performer in customer sign-ups, expanding enrollment by 70%. <br>
+                            <strong>Technical Theater at LaGuardia:</strong> Headed the Props Build Crew for five productions (2018 to 2022), Scenic Carpenter for eight productions (2018 to 2022), Props Manager for The Pirates of Penzance (2022), Head of Props for All Shook Up (2022)
                         </h3>
                     </div>
                 </div>
@@ -289,5 +333,33 @@
         <footer>
             <p class="footer"> Copyright &copy; 2024 Spencer Newirth. All rights reserved.</p>
         </footer>
+
+        <script>
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+            window.addEventListener('scroll', () => {
+                animatedElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        element.classList.add('fade-in');
+                        element.classList.remove('fade-out');
+                    } else {
+                        element.classList.add('fade-out');
+                        element.classList.remove('fade-in');
+                    }
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                animatedElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        element.classList.add('fade-in');
+                        element.classList.remove('fade-out');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
