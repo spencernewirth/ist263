@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
         <meta charset="utf-8">
         <title>Past Experience</title>
         <style>
@@ -25,79 +26,105 @@
                 font-size: 15px;
                 flex-shrink: 0;
             }
+            header a {
+                color:white;
+            }
+            header a:hover { 
+                color:#76ABAE;
+            }
 
             nav {
                 display: flex;
                 justify-content: center;
                 background: #333;
                 padding: 10px 0;
-                font-weight: bold
+                font-weight: bold;
+            }
+
+            nav a {
+                margin: 0 15px;
+                text-decoration: none;
+                color: #76ABAE;
+                font-size: 18px;
             }
 
             nav a:hover {
                 color: lightblue;
             }
+            .section-title {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding-left: 30px;
+    text-align: left;  
+}
+            .data-box {
+    position: relative;
+    text-align: center;
+    margin: 10px 0;
+}
 
-            .intro-section {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                max-width: 1200px;
-                margin: 20px auto;
-                padding: 20px;
-                background: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-            }
+.data-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+    flex-wrap: nowrap; /* Ensures no wrapping of the text and image */
+}
 
-            .intro-section img {
-                max-width: 30%;
-                height: auto;
-                border-radius: 8px;
-                margin-right: 20px;
-            }
-            img {
-                display: block; 
-                max-width: 100%; 
-                height: auto;
-            }
+.text-container {
+    display:flex;
+    flex:1 1 50%; /* Text takes 60% of the width */
+}
 
-            .intro-text {
-                flex: 1;
-            }
-           
-            .analytics-trf {
-                display: flex;
-                justify-content: space-between;
-                gap: 20px; 
-                max-width: 1200px;
-                margin: 20px auto;
-            }
+.image-container {
+    flex: 1 1 40%; /* Image takes 40% of the width */
+}
 
-            .analytics-trf article {
-                flex: 1;
-                background: #fff;
-                padding: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-            }
+.side-image {
+    width: 100%; /* Image takes the full width of its container */
+    height: auto;
+}
 
-            .community-flex {
-                display: flex;
-                justify-content: space-between;
-                gap: 20px; /* Adds spacing between sections */
-                max-width: 1200px;
-                margin: 20px auto;
-            }
+.data-item {
+    flex: 1 1 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-            .community-flex article {
-                flex: 1;
-                background: #fff;
-                padding: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-            }
-            
+.data-item h2 {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .data-list {
+        flex-direction: column; /* Stack the text and image on smaller screens */
+        gap: 20px;
+    }
+
+    .text-container,
+    .image-container {
+        flex: 1 1 100%; /* Both text and image take full width on small screens */
+    }
+
+    .side-image {
+        width: 100%; /* Image takes full width on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .data-item {
+        flex: 1 1 100%; /* Each text box takes full width on smaller screens */
+    }
+}
+
+
+
             h1, h2, h3 {
                 color: #333;
             }
@@ -117,58 +144,12 @@
                 flex-grow: 1;
             }
 
-            .community {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-            }
-
-            .community article {
-                max-width: 400px;
-                flex: 1 1 45%;
-            }
-
             footer {
                 text-align: center;
                 padding: 10px 0;
                 background: #333;
                 color: #fff;
                 flex-shrink: 0;
-            }
-
-            @media (max-width: 768px) {
-                .intro-section {
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                }
-
-                .intro-section img {
-                    margin: 0 0 20px;
-                    max-width: 90%; 
-                }
-                header {
-                    flex-direction: column;
-                    text-align: center;
-                    font-size: 16px;
-                }
-
-                nav {
-                    flex-direction: column;
-                }
-
-                nav a {
-                    margin: 10px 0;
-                }
-
-                .community article {
-                    flex: 1 1 100%; 
-                }
-
-                body {
-                    font-size: 14px;
-                }
             }
         </style>
     </head>
@@ -178,53 +159,123 @@
             <div> <a href="https://www.linkedin.com/in/spencer-newirth/"><img src="media/LI-In-Bug.png" style="width:30px;height:30px;"></a> <a href="https://www.linkedin.com/in/spencer-newirth/"></a></div>
         </header>
         <nav>
-            <a href="index.html" style="margin: 0 15px; text-decoration: none; color: #76ABAE;">Home</a>
-            <a href="experience.html" style="margin: 0 15px; text-decoration: none; color: #76ABAE;">Experience</a>
-            <a href="current.html" style="margin: 0 15px; text-decoration: none; color: #76ABAE;">Current Work</a>
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="current.html">Current Work</a>
         </nav>
-        <h1>
+        <h1 style="padding-left: 30px;">
             PAST WORK EXPERIENCE / SKILLS
         </h1>
-        <div>
-            <h2>
-                DATA ANALYST / SCIENTIST
-            </h2>
-            <p>
-                SQL<br>
-                Python <br>
-                RStudio <br>
-                Tableau <br>
-                Data Visualization <br>
-            </p>
-        </div>
-        <div>
-            <h2>
-                PRODUCER
-            </h2>
-            <p>
-                Line Production <br>
-                Project Management <br>
-                Television and Film Production planning <br>
-                Large-Scale Budgeting <br>
-                Location Management <br>
-            </p>
-        </div>
-        <div>
-            <h2>
-                TEAM MEMBER
-            </h2>
-            <p>
-                Fast Learner<br>
-                Organizational skills <br>
-                Agile project expeience<br>
-                Light technical trades / skilled labor <br>
-                Business operations <br>
-            </p>
-        </div>
 
+        <section class="data-box">
+            <h1 class="section-title">DATA ANALYST / SCIENTIST</h1>
+            <div class="data-list">
+                <div class="text-container">
+                    <div class="data-item">
+                        <h2>Skills</h2>
+                        <h3>Large-Scale Data Visualization <br> 
+                            SQL Coding <br>
+                            Python Coding for Data Analysis and Software Production <br>
+                            RScript Coding and Analysis <br>
+                            Large-Scale Data Surveying <br>
+                        </h3>
+                    </div>
+                    <div class="data-item">
+                        <h2>Experience</h2>
+                        <h3> Syracuse University iSchool Education <br>
+                            SmartElf Inc. Tech Startup Summer Intern <br>
+                            Application Programming for Information Systems Class <br>
+                            Scripting for Data Analysis Class <br>
+                            Data Driven Inquiry Class <br>
+                        </h3>
+                    </div>
+                    <div class="data-item">
+                        <h2>Work Done</h2>
+                        <h3>Data Visualization Poster on Affordable Housing in NYC, shown here <br>
+                            Cooperated in QA interface and UX testing for two iOS apps. Took part in scrum calls, brainstorming sessions and conferences <br>
+                            Produced a python-based inventory management software for a videogame using API data. <br>
+                            Researched virtual influencers and completed interviews / surveys to find consumer and market reaction to VIs. <br>
+                        </h3>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="media/affordable_housing_poster-1.png" alt="Affordable Housing Poster" class="side-image">
+                </div>
+            </div>
+        </section>
+        
+        <section class="data-box">
+            <h1 class="section-title">PRODUCER</h1>
+            <div class="data-list" style="width: 100%; margin: 10px;">
+                <div class="text-container">
+                    <div class="data-item">
+                        <h2>Skills</h2>
+                        <h3>High Quality Video and Content Production <br> 
+                            Film recording and Editing <br>
+                            Cinematic Line Production<br>
+                            Media Corporate Management <br>
+                            Casting, Production, and Design Contract Negotiation and Drafting<br>
+                        </h3>
+                    </div>
+                    <div class="data-item">
+                        <h2>Experience</h2>
+                        <h3> Syracuse University S.I. Newhouse School of Communications <br>
+                            Anomaly Entertainment Summer Intern <br>
+                            Production Management Class <br>
+                            Info Reporting and Presentation Class<br>
+                            Principles and Practices: TRF Class <br>
+                        </h3>
+                    </div>
+                    <div class="data-item">
+                        <h2>Work Done</h2>
+                        <h3> Learning communications, general law, and scheduling skills for entertainment media like film and television. <br>
+                            Researched, collected and organized twenty relevant social media marketing trends during the pre-production phase of multiple television shows. Coordinated costume designers by curating wardrobe ideas for five celebrities/main characters. Worked with producers to execute orders based on costuming budget <br>
+                            In a group, produced a production schedule, budget sheet, pitch, marketing, casting, and location treatment for a student film pilot. Sizzle reel included! <br>
+                            Performed weekly in-person speeches and presentation relating to the entertainment and tech industry. <br>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="data-box">
+            <h1 class="section-title">TEAM MEMBER</h1>
+            <div class="data-list" style="width: 100%; margin: 10px;">
+                <div class="text-container">
+                    <div class="data-item">
+                        <h2>Skills</h2>
+                        <h3>Fast Learner <br> 
+                            Online and In-Person Professional Speaking <br>
+                            Large-scale Agile and Waterfall Project Management<br>
+                            Technical Trades and Physical Skilled Labor <br>
+                            Business Operations and Employee Management<br>
+                        </h3>
+                    </div>
+                    <div class="data-item">
+                        <h2>Experience</h2>
+                        <h3> Fiorello H. Laguardia High School Technical Theater <br>
+                            La Newyorkina Seasonal Attendant <br>
+                            Hollister Co. Brand Representative <br>
+                            Hamptons Jazz Festival Social Media Manager<br>
+                            Delta Kappa Alpha Spring 2024 Design Chair <br>
+                        </h3>
+                    </div>
+                    <div class="data-item">
+                        <h2>Work Done</h2>
+                        <h3> <bold>LaNewyorkina: </bold> Worked closely with peers in a fast-paced team-oriented environment. Provided excellent customer service and ensured a comfortable environment to patrons, leading to repeat business and satisfaction. <br>
+                            Tracked consumable inventory levels and restocked when needed. Engaged in professional and candid conversations to promote offers and contributed to company visibility and growth. <br>
+                            <bold>Hamptons Jazz Fest:</bold> Developed hundreds of content drops on social media to advertise an ongoing Jazz Festival in the Hamptons area of Long Island, New York. <br>
+                            <bold>Hollister Co.:</bold>Greeted thousands of customers in-store as a retail sales associate, on-floor merchandiser, and cashier. Considered a high performer in customer sign-ups, expanding enrollment by 70%. <br>
+                            <bold>Technical Theater at LaGuardia:</bold> Headed the Props Build Crew for five productions (2018 to 2022), Scenic Carpenter for eight productions (2018 to 2022), Props Manager for The Pirates of Penzance (2022), Head of Props for All Shook Up (2022)
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         
         <footer>
             <p class="footer"> Copyright &copy; 2024 Spencer Newirth. All rights reserved.</p>
         </footer>
     </body>
+</html>
