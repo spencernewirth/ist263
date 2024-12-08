@@ -194,7 +194,7 @@
                 margin-top: 10px;
                 padding: 10px 20px;
                 background: #76ABAE;
-                color: #fff;
+                color: black;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
@@ -274,7 +274,7 @@
                     <p>Assisted in producing, filming, and editing this unscripted episode created during the Fall 2024 Semester.
                     </p>
                     <p style="font: size 10px;">
-                        *note - Youtube embed does work, but because my video is unlisted it does not properly show on this site. Clicking the link will send you to the video. Other, unlisted videos will appear 100% correctly and watchable on the page, I would just need to change the link.
+                        *note - Youtube embed does work, but because my video is unlisted it does not may not properly show on ocassion. Clicking the link will send you to the video. Other, unlisted videos will appear 100% correctly and watchable on the page, I would just need to change the link.
                     </p>
                 </div>
                 <div class="youtube-video">
@@ -305,7 +305,8 @@
                 <article class="emailform">
                     <h3>Want to be part of my future? Reach out!</h3>
                     <form action='https://formspree.io/f/mzzpldkn' method="POST">
-                        <textarea name="message" placeholder="Your message" required></textarea><br>
+                        <label for="message">Your Message:</label>
+                        <textarea name="message" placeholder="Type here." required aria-label=""></textarea><br>
                         <input type="submit" value="Submit">
                     </form>
                 </article>
