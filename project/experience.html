@@ -7,15 +7,14 @@
         <style>
             body {
                 font-family: Arial, sans-serif;
-                line-height: 1.6;
+                line-height: 1.8; /* Increase line height for better readability */
                 margin: 0;
                 padding: 0;
                 background-color: #f9f9f9;
                 display: flex;
                 flex-direction: column;
                 min-height: 100vh;
-            }
-
+        }   
             header {
                 display: flex;
                 justify-content: space-between;
@@ -51,97 +50,89 @@
             nav a:hover {
                 color: lightblue;
             }
-            .section-title {
-    font-weight: bold;
-    color: #333;
-    margin: 0;
-    padding-left: 30px;
-    text-align: left;  
-}
-            .data-box {
-    position: relative;
-    text-align: center;
-    margin: 10px 0;
-}
-
-.data-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    max-width: 1500px;
-    margin: 0 auto;
-    flex-wrap: nowrap; /* Ensures no wrapping of the text and image */
-}
-
-.text-container {
-    display:flex;
-    flex:1 1 50%; /* Text takes 60% of the width */
-}
-
-.image-container {
-    flex: 1 1 40%; /* Image takes 40% of the width */
-}
-
-.side-image {
-    width: 100%; /* Image takes the full width of its container */
-    height: auto;
-}
-
-.data-item {
-    flex: 1 1 100%;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.data-item h2 {
-    margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-    .data-list {
-        flex-direction: column; /* Stack the text and image on smaller screens */
-        gap: 20px;
-    }
-
-    .text-container,
-    .image-container {
-        flex: 1 1 100%; /* Both text and image take full width on small screens */
-    }
-
-    .side-image {
-        width: 100%; /* Image takes full width on smaller screens */
-        margin-bottom: 20px;
-    }
-
-    .data-item {
-        flex: 1 1 100%; /* Each text box takes full width on smaller screens */
-    }
-}
-
-
 
             h1, h2, h3 {
                 color: #333;
             }
 
+            h1 {
+                padding-left: 30px;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
             h2 {
+                font-size: 20px;
                 margin-top: 0;
+                font-weight: bold;
+                text-align: left;
+            }
+
+            h3 {
+                font-size: 16px;
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+
+            .section-title {
+                font-weight: bold;
+                color: #333;
+                margin: 0;
+                padding-left: 30px;
+                text-align: left;  
+            }
+
+            .data-box {
+                margin: 20px 0;
+            }
+
+            .data-list {
+                display: flex;
+                flex-wrap: wrap; /* Allows items to wrap onto the next line */
+                justify-content: space-between;
+                gap: 20px;
+                max-width: 1500px;
+                margin: 0 auto;
+            }
+
+            .text-container,
+            .image-container {
+                display: flex;
+                flex-direction: column;
+                width: 48%; /* Adjusted to make room for gap */
+            }
+
+            .text-container .data-item {
+                flex: 1;
+                padding: 15px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                text-align: left; /* Align text to the left for better reading */
+                margin-bottom: 20px;
+            }
+
+            .text-container .data-item h2 {
+                margin-bottom: 10px; /* Adds space below the heading */
+            }
+
+            .text-container .data-item h3 {
+                margin-top: 10px;
+            }
+
+            .image-container {
+                flex: 1;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
                 align-items: center;
             }
 
-            article {
-                margin: 20px auto;
-                max-width: 800px;
-                padding: 20px;
-                background: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            .side-image {
+                width: 100%;
+                height: auto;
                 border-radius: 8px;
-                flex-grow: 1;
             }
 
             footer {
@@ -151,6 +142,27 @@
                 color: #fff;
                 flex-shrink: 0;
             }
+
+            @media (max-width: 768px) {
+                .data-list {
+                    flex-direction: column; /* Stack text and image on smaller screens */
+                    gap: 20px;
+                }
+
+                .text-container, .image-container {
+                    width: 100%; /* Ensure each container takes full width on small screens */
+                }
+
+                .side-image {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                .data-item {
+                    flex: 1 1 100%; /* Each item takes full width */
+                }
+            }
+
         </style>
     </head>
     <body>
@@ -265,7 +277,7 @@
                         <h3> <bold>LaNewyorkina: </bold> Worked closely with peers in a fast-paced team-oriented environment. Provided excellent customer service and ensured a comfortable environment to patrons, leading to repeat business and satisfaction. <br>
                             Tracked consumable inventory levels and restocked when needed. Engaged in professional and candid conversations to promote offers and contributed to company visibility and growth. <br>
                             <bold>Hamptons Jazz Fest:</bold> Developed hundreds of content drops on social media to advertise an ongoing Jazz Festival in the Hamptons area of Long Island, New York. <br>
-                            <bold>Hollister Co.:</bold>Greeted thousands of customers in-store as a retail sales associate, on-floor merchandiser, and cashier. Considered a high performer in customer sign-ups, expanding enrollment by 70%. <br>
+                            <bold>Hollister Co:</bold>Greeted thousands of customers in-store as a retail sales associate, on-floor merchandiser, and cashier. Considered a high performer in customer sign-ups, expanding enrollment by 70%. <br>
                             <bold>Technical Theater at LaGuardia:</bold> Headed the Props Build Crew for five productions (2018 to 2022), Scenic Carpenter for eight productions (2018 to 2022), Props Manager for The Pirates of Penzance (2022), Head of Props for All Shook Up (2022)
                         </h3>
                     </div>
